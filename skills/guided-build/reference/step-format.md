@@ -36,8 +36,12 @@ abstraction exists, or the failure it prevents.]
 
 **Verify**
 
-Run: `[exact command]`
+Command: `[exact command]`
 Passing looks like: `[exact expected output]`
+
+The first time a tool appears, they run it. After that you run it and paste the
+real output. Either way the step names the command and what passing looks like,
+so the result is never a matter of opinion.
 
 **Checkpoint**
 
