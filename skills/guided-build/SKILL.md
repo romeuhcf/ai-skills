@@ -86,7 +86,7 @@ Send 1-2, stop, wait. Then 3-7 after they answer. Template and worked example:
 
 ```
 1. Where we are    one line: milestone/step, what it unlocks
-2. The question    one, answerable before writing anything
+2. The question    one, answerable with what they already have
 --- wait ---
 3. Why this step   the problem it solves, not the syntax
 4. Your task       file, function, behaviour, in prose
@@ -94,6 +94,14 @@ Send 1-2, stop, wait. Then 3-7 after they answer. Template and worked example:
 6. Verify          exact command for THEM to run, and what passing prints
 7. Checkpoint      a question their passing code cannot answer for them
 ```
+
+**Before sending the question, check it is answerable.** A question that
+presupposes the idiom the step is about to teach is not a question, it is a quiz
+they must fail. When the step introduces an unfamiliar *form* - a testing idiom, a
+build system, a protocol, a new kind of file - two sentences of orientation come
+first, or the question targets something they demonstrably already have. Say which
+you are assuming, in half a line, so they can correct it: "assuming you have not
+written a table-driven test before".
 
 After they report back:
 
@@ -147,6 +155,7 @@ something you assumed away.
 - A step verified by judgement instead of a command.
 - Starting the plan without levelling, or keeping the read to yourself.
 - Asking them to rate their own level.
+- An opening question that presupposes the idiom the step exists to teach.
 - Answering a behaviour question from memory when a probe would settle it.
 - "The tests pass", with no command and no output.
 - Fixing their code yourself because you can see the error.

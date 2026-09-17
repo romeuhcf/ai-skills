@@ -4,6 +4,7 @@
 
 - The template
 - A worked example (Rust web server, milestone 2)
+- When the step introduces an unfamiliar form
 - What separates a reference snippet from a solution
 - Checkpoint questions that work
 
@@ -90,6 +91,34 @@ Passing looks like: `404`
 
 Your handler now returns two different tuples from two branches. Rust requires both
 arms of an `if` to have the same type. Why does this compile?
+
+## When the step introduces an unfamiliar form
+
+An API you can hand them in the Reference section. A *form* you cannot: a
+table-driven test, a migration, a Makefile, a protocol handshake, a new kind of
+file. The opening question is the failure point, because the obvious question about
+a form is a question about the thing they have not met yet.
+
+Broken, on a step that introduces table-driven tests:
+
+> "Your `Set` appends to the receiver. What happens to the slice between cases in
+> the table, and what does that force you to do inside the `t.Run`?"
+
+They do not know what a table is here, or what `t.Run` is. The question reads as an
+exam on the lesson that has not happened.
+
+Two fixes, both one line:
+
+**Ask.** "Have you written a table-driven test before, in any language?" Two words
+of answer, and the next message is either three sentences of orientation or none.
+
+**Or assume out loud.** "Assuming you have not written one of these before - here is
+the shape, and then one question about it." Cheaper, and they correct you if wrong.
+
+Either way the opening question moves to something they do have. On that same step:
+"`Set` appends to the receiver. If five inputs run one after another against the
+same value, what is in it by the fifth?" - which is about their own code, needs no
+vocabulary, and sets up the isolation point exactly.
 
 ## Reference snippet vs. solution
 

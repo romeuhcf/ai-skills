@@ -8,6 +8,7 @@
 - Turning answers into plan decisions
 - Recording the baseline
 - Re-levelling mid-course
+- Levelling does not stop at intake
 - Worked example
 - Anti-patterns
 
@@ -120,6 +121,30 @@ contradicts it:
 
 Edit the baseline in place and date the revision. Do not delete what it said before.
 
+## Levelling does not stop at intake
+
+The three probes tell you where they stand on the language, the domain and their
+tooling. They tell you nothing about a **form** that shows up in milestone 6: a
+table-driven test, a build system, a query language, a protocol, a new kind of file.
+
+So when a step introduces a form rather than an API, spend one line before the
+step's opening question:
+
+> "Have you written a table-driven test before, in any language?"
+
+Two words of answer changes the next message completely, and the cost of guessing is
+high in both directions. Guess high and the opening question presupposes exactly the
+thing the step exists to teach - which reads as a quiz they are failing before the
+lesson starts. Guess low and you explain something they have done for a decade.
+
+An alternative that costs nothing: state the assumption instead of asking, in half a
+line, and let them correct it.
+
+> "Assuming you have not written a table-driven test before - "
+
+Either way, put it in the same message as the step. It is not a separate turn, and
+it is not the intake assessment again. Record what you learn in the baseline.
+
 ## Worked example
 
 Goal: a reverse proxy in Go. Developer writes Ruby.
@@ -161,3 +186,4 @@ proxy milestones rather than before them, verification as a single command per s
 - Treating a blank as a failure. It is the cheapest, cleanest data point available.
 - Re-probing later because you doubt the baseline. Watch the work instead; it is
   better evidence than another question.
+- Opening a step with a question that only makes sense once the step is taught.
