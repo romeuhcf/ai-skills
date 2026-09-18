@@ -10,12 +10,20 @@
 
 ## Rules for a good milestone
 
-A milestone is 3-8 steps and ends with something the developer can run and show.
+A milestone is the smallest increment that delivers one new concept, and it ends with
+something the developer can run and show. Usually 3-8 steps; fewer is fine and often
+better.
 
 - **It has a demo.** "Ownership and borrowing" is not a milestone. "The server keeps
   shared state across requests without cloning it per request" is.
-- **It introduces at most two new concepts.** A third means it should be two
-  milestones.
+- **It introduces exactly one new concept.** Two means it is two milestones. This is
+  the rule that gets broken most, and the cost is that when the developer struggles
+  you cannot tell which of the two lost them.
+- **It is a minimum deliverable increment.** If half of it could ship on its own and
+  be useful, that half was the milestone and the rest is the next one.
+- **It opens with an explanation, not a task.** What it makes possible, why it
+  exists, a short theoretical example, and a generic implementation sketch in another
+  domain when one applies. Then a clarity checkpoint. See `reference/explaining.md`.
 - **It survives being stopped after.** If they walk away at the end of M3, they have
   a smaller working thing, not a half-thing.
 - **It is named for the capability, not the topic.** "Serves JSON on two routes",
